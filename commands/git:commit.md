@@ -10,9 +10,9 @@ Create a short, focused Git commit for the current repository changes.
 
 ## Procedure
 
-1. Inspect repository state with `git status --short`.
-2. Inspect staged changes with `git diff --cached`.
-3. If nothing is staged, inspect unstaged changes with `git diff`, then stage the working tree with `git add -A` before committing.
+1. Stage the working tree with `git add -A`.
+2. Inspect repository state with `git status --short`.
+3. Inspect staged changes with `git diff --cached`.
 4. Derive the commit message only from the actual diff.
 5. If `$ARGUMENTS` is non-empty, treat it as the issue key or prefix and prepend it to the commit subject as `<issue-key>: `.
 6. If `$ARGUMENTS` is empty, infer an issue key from the branch name only when an obvious key is present, such as `PROJ-123` or `#123`; otherwise commit without an issue key and do not ask.
